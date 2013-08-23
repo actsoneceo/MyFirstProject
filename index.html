@@ -13,8 +13,16 @@
 
 <script src="phonegap.js"></script>
 <script type="text/javascript" charset="utf-8">
+var onDeviceReady = function() {
+	var result = navigator.network.connection.type;
+	alert(result);
+};
+function init() {
+    document.addEventListener("deviceready", onDeviceReady, true);
+}
+</script>
 </head>
-<body>
+<body onload="init();">
 <p>
 Hello~~~~
 </p>
